@@ -1,4 +1,5 @@
-theme: jekyll/minima
+remote_theme: jekyll/minima
+
 title: " "
 description: ""
 
