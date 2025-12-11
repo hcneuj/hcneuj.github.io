@@ -1,6 +1,6 @@
 ---
-title: "TDA"
 layout: default
+title: "TDA"
 ---
 
 # TDA
