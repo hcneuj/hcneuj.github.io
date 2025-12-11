@@ -2,6 +2,10 @@ theme: jekyll-theme-slate
 title: " "
 description: ""
 
+plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
 header_pages:
   - index.md
   - packages.md
