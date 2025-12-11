@@ -1,4 +1,4 @@
-remote_theme: jekyll/minima
+theme: minima
 
 title: " "
 description: ""
@@ -10,5 +10,10 @@ minima:
     - packages.md
     - tda.md
     - publications.md
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
 
 markdown: kramdown
