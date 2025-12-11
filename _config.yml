@@ -3,7 +3,7 @@ title: ???
 description: ???
 
 header_pages:
-- index.md
-- packages.md
-- tda.md
-- publications.md
+  - index.md
+  - packages.md
+  - tda.md
+  - publications.md
