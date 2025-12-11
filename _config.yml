@@ -4,7 +4,6 @@ description: ""
 
 minima:
   skin: dark
-
   nav_pages:
     - index.md
     - packages.md
@@ -13,7 +12,7 @@ minima:
 
 
 plugins:
-  - jekyll-include-cache
-  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
 
 markdown: kramdown
