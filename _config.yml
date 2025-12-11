@@ -1,4 +1,4 @@
-theme: minima
+remote_theme: jekyll/minima
 
 title: " "
 description: ""
@@ -13,6 +13,7 @@ minima:
 
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
 
