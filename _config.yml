@@ -1,13 +1,18 @@
-theme: jekyll-theme-slate
+theme: minima
 title: " "
 description: ""
+
+minima:
+  skin: dark
+
+  nav_pages:
+  - index.md
+  - packages.md
+  - tda.md
+  - publications.md
+
 
 plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
 
-header_pages:
-  - index.md
-  - packages.md
-  - tda.md
-  - publications.md
