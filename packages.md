@@ -1,6 +1,6 @@
 ---
-title: "Packages"
 layout: default
+title: "Packages"
 ---
 # Packages
 
