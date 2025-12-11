@@ -3,17 +3,4 @@ theme: minima
 title: " "
 description: ""
 
-minima:
-  skin: dark
-  nav_pages:
-    - index.md
-    - packages.md
-    - tda.md
-    - publications.md
-
-plugins:
-  - jekyll-remote-theme
-  - jekyll-feed
-  - jekyll-seo-tag
-
 markdown: kramdown
