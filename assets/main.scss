@@ -1,0 +1,32 @@
+---
+---
+
+@import "minima";
+
+/* DARK THEME OVERRIDES */
+
+body {
+  background-color: #111;
+  color: #e5e5e5;
+}
+
+.site-header {
+  background: #222;
+  border-bottom: 1px solid #444;
+}
+
+.site-nav .page-link {
+  color: #ddd !important;
+}
+
+.site-nav .page-link:hover {
+  color: white !important;
+}
+
+a {
+  color: #4aa3ff;
+}
+
+a:hover {
+  color: #77c2ff;
+}
