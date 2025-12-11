@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
-title: ???
-description: ???
+title: ""
+description: ""
 
 header_pages:
   - index.md
