@@ -1,3 +1,9 @@
 theme: jekyll-theme-slate
 title: ???
 description: ???
+
+header_pages:
+- index.md
+- packages.md
+- tda.md
+- publications.md
