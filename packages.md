@@ -12,7 +12,7 @@ This page contains different packages in both R and Python that are available fo
 A Python package to perform parameter estimation for ordinary differential equations (ODEs) using the Differential Evolution (DE) algorithm, with an option to perform bootstrapping. There is also an option to run bootstrapping on multiple CPU processors.
 
 #### Download
-  - [Initial Release (v1.0.0)](https://github.com/hcneuj/A_General_ODE_Bootstrap/releases/tag/v1.0.0/A_General_ODE_Bootstrap.py)
+  - [Initial Release (v1.0.0)](https://github.com/hcneuj/A_General_ODE_Bootstrap/releases/download/v1.0.0/A_General_ODE_Bootstrap.py)
 
 <details markdown="1">
 <summary><strong>How to Use A_General_ODE_Bootstrap</strong></summary>
