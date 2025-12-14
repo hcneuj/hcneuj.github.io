@@ -19,7 +19,7 @@ A Python package to perform parameter estimation for ordinary differential equat
 
 <br>
 
-## Requirements
+Requirements:
 
 For importing into your python workspace:
 - `numpy`
@@ -36,7 +36,7 @@ For running functions within this package:
 - Data from different treatment groups needs to be separated out before running anything
 - Initial conditions for all ODE equations
 
-## Using this Package
+Using this Package:
 
 1. Import all required libraries and packages:
    
