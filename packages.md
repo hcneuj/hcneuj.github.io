@@ -14,12 +14,12 @@ A Python package to perform parameter estimation for ordinary differential equat
 #### Download
   - [Initial Release (v1.0.0)](https://github.com/hcneuj/A_General_ODE_Bootstrap/releases/tag/v1.0.0/A_General_ODE_Bootstrap.py)
 
-<details>
-<summary><strong>How to use A_General_ODE_Bootstrap</strong></summary>
+<details markdown="1">
+<summary><strong>How to Use A_General_ODE_Bootstrap</strong></summary>
 
 <br>
 
-Requirements:
+#### Requirements:
 
 For importing into your python workspace:
 - `numpy`
@@ -36,7 +36,7 @@ For running functions within this package:
 - Data from different treatment groups needs to be separated out before running anything
 - Initial conditions for all ODE equations
 
-Using this Package:
+#### Using this Package:
 
 1. Import all required libraries and packages:
    
