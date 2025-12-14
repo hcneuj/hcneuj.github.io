@@ -216,24 +216,32 @@ code {
 }
 
 /* ===================================== */
-/* Remove Minima's white code container  */
-/* (outer wrapper is <div class="highlight">) */
+/* Final code block styling (clean)      */
 /* ===================================== */
 
 div.highlight {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+  background: #1e1e1e !important;   /* inner background */
+  border: 1px solid #3a3a3a !important; /* subtle outline */
+  border-radius: 6px !important;
   padding: 0 !important;
   margin: 1.5em 0 !important;
 }
 
-/* The actual code block is the <pre> inside it */
-div.highlight > pre,
+/* The actual <pre> */
 div.highlight pre {
-  background: #1e1e1e !important;
+  background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   padding: 1em !important;
-  border-radius: 6px !important;
+  margin: 0 !important;
+  overflow-x: auto;
 }
+
+/* Inline code */
+code {
+  background: #2a2a2a !important;
+  color: #e6e6e6;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
