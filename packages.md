@@ -20,6 +20,7 @@ A Python package to perform parameter estimation for ordinary differential equat
 <br>
 
 ## Requirements
+
 For importing into your python workspace:
   - numpy
   - pandas
@@ -35,7 +36,9 @@ For running functions within this package:
   - Initial conditions for all ODE equations
 
 ## Using this Package
+
 1. Import all required libraries and packages:
+   
 ```python
 from A_General_ODE_Bootstrap import timeseries_pull, observedData_pull, CostFunction, DE_Generalized, DE_Results
 
@@ -48,12 +51,15 @@ import seaborn as sns
 from collections import Counter
 from matplotlib.ticker import MultipleLocator
 ```
+
 2. Import data as a `pandas` dataframe:
+   
 ```python
 your_data = pd.read_csv('your_data_file.csv')
 # OR
 your_data = pd.read_excel('your_data_file.xlsx')
 ```
+
 Doing this should result in a dataframe that looks, in some way, shape, or form, like:
 | Time | Variable A | Variable B | $$\cdots$$ | Variable $k$ |
 |-------|------------|------------|------------|--------------|
@@ -64,6 +70,7 @@ Doing this should result in a dataframe that looks, in some way, shape, or form,
 | $t_n$ | $$A_n$$    | $$B_n$$    | $$\cdots$$ | $$k_n$$      |
 
 Or, if you have more than one treatment group in your dataframe:
+
 | Time | Treatment |Variable A | Variable B | $$\cdots$$ | Variable $k$ |
 |------|-----------|-----------|------------|------------|--------------|
 | $t_0$ | $\alpha$ | $$A_0$$    | $$B_0$$    | $$\cdots$$ | $$k_0$$     |
@@ -96,6 +103,7 @@ Or, if you have more than one treatment group in your dataframe:
 | $t_n$ | $\beta$  | $$A_n$$    | $$B_n$$    | $$\cdots$$ | $$k_n$$     |
 
 4. Define ODE model:
+   
 ```python
 def ODE_model(y, t, parameter 1, parameter 2, etc.):
   # Define all ODE variables
@@ -113,9 +121,11 @@ def ODE_model(y, t, parameter 1, parameter 2, etc.):
 
   return dy
 ```
+
 NOTE: The order in which you return your ODEs is the same order in which solutions will be returned when solving the ODEs using Differential Evolution and the ODE solver.
 
 5. Pull time series information using `timeseries_pull(df, time_column)`:
+   
 ```python
 sample_t, unique_t = timeseries_pull(your_data, 'your time column label')
 
@@ -124,9 +134,11 @@ sample_t, unique_t = timeseries_pull(your_data, 'your time column label')
 sample_t_a, unique_t_a = timeseries_pull(your_data_trt_a, 'your time column label')
 sample_t_b, unique_t_b = timeseries_pull(your_data_trt_b, 'your time column label')
 ```
+
 NOTE: To pull the correct time series data, the column name entered in the function where time is stored needs to match what is in your dataframe.
 
 6. Pull observed data using `observedData_pull(df, data_columns)`:
+   
 ```python
 your_obs = observedData_pull(your_data, ['Variable A', 'Variable B', etc.])
 
@@ -135,16 +147,20 @@ your_obs = observedData_pull(your_data, ['Variable A', 'Variable B', etc.])
 your_obs_trt_a = observedData_pull(your_data_trt_a, ['Variable A', 'Variable B', etc.])
 your_obs_trt_b = observedData_pull(your_data_trt_b, ['Variable A', 'Variable B', etc.])
 ```
+
 NOTE: Observed data columns need to be entered as a list into `observedData_pull`, even if there is only one variable in the dataframe.
 
 7. Define parameter bounds for Differential Evolution to search through:
+   
 ```python
 parameter 1 = lower bound, upper bound
 parameter 2 = lower bound, upper bound
 
 param_bounds = [parameter 1, parameter 2]
 ```
+
 8. Use `DE_Generalized` to solve system of ODEs, and implement optional bootstrapping:
+   
 ```python
 de_gen_output = DE_Generalized(['linear', 'log10'], # List of transforms to undo if parameters where transformed: 'Linear' -> unchanged
                                                     #                                                             'log10' -> undo log10 transformation of parameter
@@ -183,11 +199,13 @@ de_gen_output = DE_Generalized(['linear', 'log10'], # List of transforms to undo
 
                                n_jobs=1) # Specifies how many CPU processors bootstrapping should utilize
 ```
+
 NOTE: `os.cpu_count()` can be used to determine exactly how many CPU processors are availables for use. More processors used results in reduced run-time for bootstrapping. Default value for the number of processors to be used is set to 1.
 
 NOTE: If there are multiple treatment groups, you need to run `DE_Generalized` for each treatment group, separately.
 
 9. Use `DE_Results` to get fitted line using estimated parameters, confidence intervals for parameters from bootstrapping, and confidence interval band from model fits from bootstrapping results:
+    
 ```python
 de_res_output = DE_Results(de_gen_output,
 
@@ -205,10 +223,13 @@ de_res_output = DE_Results(de_gen_output,
 
                            param_names=['parameter 1', 'parameter 2']) # List of parameter names to produce a labeled table with parameter estimates and confidence intervals
 ```
+
 10. View results:
+    
 ```python
 de_res_output['Parameter Table']
 ```
+
 | Parameter | Estimate (Full Model) | Lower CI | Upper CI |
 |-----------|-----------------------|----------|----------|
 | parameter 1 | some estimated value | lower CI value | upper CI value |
@@ -219,6 +240,7 @@ NOTE: Lower and Upper CI estimates come from bootstrapping.
 11. Graph results:
 
 Results can now be graphed. To pull individual results from the output of `DE_Results`:
+
 ```python
 de_res_output['time'] # Time
 
@@ -231,6 +253,7 @@ de_res_output['Lower CI: Fit'][:, j] # Lower bound of confidence interval for bo
 de_res_output['Upper CI: Fit'][:, j] # Upper bound of confidence interval for bootstrap fits
                                      # j is the index for each individual ODE solution
 ```
+
 NOTE: Order of outputs for each ODE in `DE_Results` matches the same order ODE equations are defined and returned in from ODE_model.
 
 
