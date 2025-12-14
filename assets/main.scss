@@ -32,12 +32,13 @@ a:hover {
 }
 
 /* ===================================== */
-/* FORCE OVERRIDE Minima TABLE STYLES    */
+/* DARK TABLES — PAGES + POSTS           */
 /* ===================================== */
 
+.page-content table,
 .post-content table {
-  width: auto !important;          /* content-fit */
-  table-layout: auto !important;   /* allow natural sizing */
+  width: auto !important;
+  table-layout: auto !important;
   max-width: 100%;
   border-collapse: collapse;
   margin: 1.5em 0;
@@ -46,6 +47,7 @@ a:hover {
 }
 
 /* Header row */
+.page-content thead th,
 .post-content thead th {
   background-color: #2a2a2a !important;
   color: #e6e6e6;
@@ -57,6 +59,7 @@ a:hover {
 }
 
 /* Body cells */
+.page-content tbody td,
 .post-content tbody td {
   padding: 10px 16px;
   border: 1px solid #3a3a3a;
@@ -64,30 +67,37 @@ a:hover {
   white-space: nowrap;
 }
 
-/* Zebra striping — neutral gray */
+/* Zebra striping — subtle, neutral */
+.page-content tbody tr:nth-child(even),
 .post-content tbody tr:nth-child(even) {
   background-color: #1b1b1b;
 }
 
+.page-content tbody tr:nth-child(odd),
 .post-content tbody tr:nth-child(odd) {
   background-color: #161616;
 }
 
 /* Hover */
+.page-content tbody tr:hover,
 .post-content tbody tr:hover {
   background-color: #222;
 }
 
 /* MathJax inside tables */
+.page-content table mjx-container,
 .post-content table mjx-container {
   color: #e6e6e6;
 }
 
 /* Vertical centering */
+.page-content table th,
+.page-content table td,
 .post-content table th,
 .post-content table td {
   vertical-align: middle;
 }
+
 
 details pre,
 details code {
