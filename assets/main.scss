@@ -197,3 +197,20 @@ code {
   border-radius: 4px;
 }
 
+/* ============================= */
+/* REMOVE Minima Rouge wrapper  */
+/* ============================= */
+
+.highlighter-rouge {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 1.5em 0;
+}
+
+/* Ensure no nested padding survives */
+.highlighter-rouge .highlight {
+  padding: 0 !important;
+  background: transparent !important;
+}
