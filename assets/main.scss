@@ -31,6 +31,55 @@ a:hover {
   color: #77c2ff;
 }
 
+table {
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  width: 100%;
+  background-color: #0f172a;
+  font-size: 0.95rem;
+}
+
+/* Header row */
+thead th {
+  background-color: #1f2933;
+  color: #e5e7eb;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-bottom: 2px solid #374151;
+}
+
+/* Body cells */
+tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #2d3748;
+  color: #e5e7eb;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+  background-color: #111827;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #0b1220;
+}
+
+/* Hover highlight */
+tbody tr:hover {
+  background-color: #1e293b;
+}
+
+/* MathJax inside tables */
+table mjx-container {
+  color: #e5e7eb;
+}
+
+/* Vertical centering */
+table td,
+table th {
+  vertical-align: middle;
+}
+
 details pre,
 details code {
   background-color: #1e1e1e !important;
