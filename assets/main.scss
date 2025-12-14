@@ -98,3 +98,69 @@ details code:not(pre code) {
   border-radius: 4px;
 }
 
+pre,
+code {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+/* Keywords: import, from, return, if, etc. */
+.highlight .k {
+  color: #c586c0;
+  font-weight: 600;
+}
+
+/* Function names */
+.highlight .nf {
+  color: #82aaff;
+  font-weight: 600;
+}
+
+/* Builtins (len, range, list, etc.) */
+.highlight .nb {
+  color: #ffcb6b;
+}
+
+/* Strings */
+.highlight .s {
+  color: #c3e88d;
+}
+
+/* Numbers */
+.highlight .mi,
+.highlight .mf {
+  color: #f78c6c;
+}
+
+/* Comments */
+.highlight .c {
+  color: #6a9955;
+  font-style: italic;
+}
+
+/* Imports / modules */
+.highlight .nn {
+  color: #4ec9b0;
+}
+
+/* Operators */
+.highlight .o {
+  color: #89ddff;
+}
+
+/* Variables */
+.highlight .n {
+  color: #d4d4d4;
+}
+
+/* Decorators */
+.highlight .nd {
+  color: #dcdcaa;
+}
+
+/* Improve block contrast */
+pre.highlight {
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 14px;
+}
