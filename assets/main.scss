@@ -31,47 +31,55 @@ a:hover {
   color: #77c2ff;
 }
 
+/* ===================================== */
+/* TABLES — CLEAN, NEUTRAL, CONTENT-FIT  */
+/* ===================================== */
+
 table {
   border-collapse: collapse;
   margin: 1.5em 0;
-  width: 100%;
-  background-color: #0f172a;
+  width: auto;                 /* <-- fit to content */
+  max-width: 100%;
+  background-color: #1e1e1e;
   font-size: 0.95rem;
 }
 
 /* Header row */
 thead th {
-  background-color: #1f2933;
-  color: #e5e7eb;
+  background-color: #2a2a2a;   /* neutral gray */
+  color: #e6e6e6;
   font-weight: 600;
   padding: 10px 14px;
-  border-bottom: 2px solid #374151;
+  border: 1px solid #3a3a3a;
+  text-align: left;
+  white-space: nowrap;         /* prevent wrapping */
 }
 
 /* Body cells */
 tbody td {
   padding: 10px 14px;
-  border-bottom: 1px solid #2d3748;
-  color: #e5e7eb;
+  border: 1px solid #3a3a3a;
+  color: #e6e6e6;
+  white-space: nowrap;         /* fit content */
 }
 
-/* Zebra striping */
+/* Zebra striping (subtle, neutral) */
 tbody tr:nth-child(even) {
-  background-color: #111827;
+  background-color: #1b1b1b;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #0b1220;
+  background-color: #161616;
 }
 
 /* Hover highlight */
 tbody tr:hover {
-  background-color: #1e293b;
+  background-color: #222;
 }
 
 /* MathJax inside tables */
 table mjx-container {
-  color: #e5e7eb;
+  color: #e6e6e6;
 }
 
 /* Vertical centering */
