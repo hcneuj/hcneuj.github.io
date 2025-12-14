@@ -32,59 +32,60 @@ a:hover {
 }
 
 /* ===================================== */
-/* TABLES — CLEAN, NEUTRAL, CONTENT-FIT  */
+/* FORCE OVERRIDE Minima TABLE STYLES    */
 /* ===================================== */
 
-table {
+.post-content table {
+  width: auto !important;          /* content-fit */
+  table-layout: auto !important;   /* allow natural sizing */
+  max-width: 100%;
   border-collapse: collapse;
   margin: 1.5em 0;
-  width: auto;                 /* <-- fit to content */
-  max-width: 100%;
   background-color: #1e1e1e;
   font-size: 0.95rem;
 }
 
 /* Header row */
-thead th {
-  background-color: #2a2a2a;   /* neutral gray */
+.post-content thead th {
+  background-color: #2a2a2a !important;
   color: #e6e6e6;
   font-weight: 600;
-  padding: 10px 14px;
+  padding: 10px 16px;
   border: 1px solid #3a3a3a;
   text-align: left;
-  white-space: nowrap;         /* prevent wrapping */
+  white-space: nowrap;
 }
 
 /* Body cells */
-tbody td {
-  padding: 10px 14px;
+.post-content tbody td {
+  padding: 10px 16px;
   border: 1px solid #3a3a3a;
   color: #e6e6e6;
-  white-space: nowrap;         /* fit content */
+  white-space: nowrap;
 }
 
-/* Zebra striping (subtle, neutral) */
-tbody tr:nth-child(even) {
+/* Zebra striping — neutral gray */
+.post-content tbody tr:nth-child(even) {
   background-color: #1b1b1b;
 }
 
-tbody tr:nth-child(odd) {
+.post-content tbody tr:nth-child(odd) {
   background-color: #161616;
 }
 
-/* Hover highlight */
-tbody tr:hover {
+/* Hover */
+.post-content tbody tr:hover {
   background-color: #222;
 }
 
 /* MathJax inside tables */
-table mjx-container {
+.post-content table mjx-container {
   color: #e6e6e6;
 }
 
 /* Vertical centering */
-table td,
-table th {
+.post-content table th,
+.post-content table td {
   vertical-align: middle;
 }
 
