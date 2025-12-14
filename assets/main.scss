@@ -104,44 +104,74 @@ code {
   color: #d4d4d4;
 }
 
-/* ============================= */
-/* Code blocks (Python / Rouge) */
-/* ============================= */
 
-/* Code block container */
-.highlight {
-  background: #1e1e1e;
-  border-radius: 6px;
-  padding: 1em;
+/* ===================================================== */
+/* CODE BLOCKS — CLEAN, BORDERED, COHESIVE (FINAL)       */
+/* ===================================================== */
+
+/* OUTER CONTAINER */
+div.highlight {
+  background: #1e1e1e !important;
+  border: 1px solid #3a3a3a !important;
+  border-radius: 6px !important;
+  margin: 1.5em 0 !important;
+}
+
+/* INNER <pre> */
+div.highlight pre {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 1em !important;
+  margin: 0 !important;
   overflow-x: auto;
 }
 
-/* Keywords: import, from, as, def */
+/* INLINE CODE */
+code {
+  background: #2a2a2a !important;
+  color: #e6e6e6 !important;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+/* ===================================================== */
+/* PYTHON SYNTAX COLORING (ROUGE TOKENS)                  */
+/* ===================================================== */
+
+/* Keywords: from, import, def, return */
 .highlight .kn {
-  color: #c586c0;
+  color: #c792ea;
   font-weight: 600;
 }
 
-/* Built-in names: list, dict, range */
-.highlight .nb {
-  color: #ffcb6b;
+/* Function names */
+.highlight .nf {
+  color: #82aaff;
+  font-weight: 600;
 }
 
-/* Module names: numpy, pandas, scipy */
+/* Variables */
+.highlight .n,
+.highlight .nv {
+  color: #d4d4d4;
+}
+
+/* Module / namespace names */
 .highlight .nn {
   color: #4ec9b0;
 }
 
-/* Imported names (functions, classes, variables) */
-.highlight .n {
-  color: #82aaff;
-  font-weight: 600;
+/* Operators: = , : */
+.highlight .o,
+.highlight .p {
+  color: #89ddff;
 }
 
-/* Function definitions (def foo) */
-.highlight .nf {
-  color: #82aaff;
-  font-weight: 700;
+/* Numbers */
+.highlight .mi,
+.highlight .mf {
+  color: #f78c6c;
 }
 
 /* Strings */
@@ -158,90 +188,9 @@ code {
   font-style: italic;
 }
 
-/* Numbers */
-.highlight .mi,
-.highlight .mf {
-  color: #f78c6c;
-}
-
-/* Operators */
-.highlight .o {
-  color: #89ddff;
-}
-
-/* ============================= */
-/* REMOVE Minima code container */
-/* ============================= */
-
-pre {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 1.5em 0;
-}
-
-/* Actual code block */
-.highlight {
-  background: #1e1e1e;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 1em;
-  border-radius: 6px;
-}
-
-/* Inline code */
-code {
-  background: #1e1e1e;
-  padding: 0.15em 0.35em;
-  border-radius: 4px;
-}
-
-/* ============================= */
-/* REMOVE Minima Rouge wrapper  */
-/* ============================= */
-
-.highlighter-rouge {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 1.5em 0;
-}
-
-/* Ensure no nested padding survives */
-.highlighter-rouge .highlight {
-  padding: 0 !important;
-  background: transparent !important;
-}
-
-/* ===================================== */
-/* Final code block styling (clean)      */
-/* ===================================== */
-
-div.highlight {
-  background: #1e1e1e !important;   /* inner background */
-  border: 1px solid #3a3a3a !important; /* subtle outline */
-  border-radius: 6px !important;
-  padding: 0 !important;
-  margin: 1.5em 0 !important;
-}
-
-/* The actual <pre> */
-div.highlight pre {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 1em !important;
-  margin: 0 !important;
-  overflow-x: auto;
-}
-
-/* Inline code */
-code {
-  background: #2a2a2a !important;
-  color: #e6e6e6;
-  padding: 0.15em 0.35em;
-  border-radius: 4px;
+/* Booleans / None */
+.highlight .kc {
+  color: #ff5370;
+  font-weight: 600;
 }
 
