@@ -63,7 +63,7 @@ your_data = pd.read_excel('your_data_file.xlsx')
 
 Doing this should result in a dataframe that looks, in some way, shape, or form, like:
 
-| Time | Variable A | Variable B | ... | Variable $k$ |
+| Time | Variable A | Variable B | $\cdots$ | Variable $k$ |
 |-------|------------|------------|------------|--------------|
 | $t_0$ | $A_0$    | $B_0$    | $\cdots$ | $k_0$      |
 | $t_1$ | $A_1$    | $B_1$    | $\cdots$ | $k_1$      |
@@ -73,7 +73,7 @@ Doing this should result in a dataframe that looks, in some way, shape, or form,
 
 Or, if you have more than one treatment group in your dataframe:
 
-| Time | Treatment |Variable A | Variable B | ... | Variable $k$ |
+| Time | Treatment |Variable A | Variable B | $\cdots$ | Variable $k$ |
 |------|-----------|-----------|------------|------------|--------------|
 | $t_0$ | $\alpha$ | $A_0$    | $B_0$    | $\cdots$ | $k_0$     |
 | $t_1$ | $\alpha$ | $A_1$    | $B_1$    | $\cdots$ | $k_1$     |
@@ -88,7 +88,7 @@ Or, if you have more than one treatment group in your dataframe:
 
 3. If there are multiple treatment groups, separate dataframe by treatment group:
 
-| Time | Treatment |Variable A | Variable B | ... | Variable $k$ |
+| Time | Treatment |Variable A | Variable B | $\cdots$ | Variable $k$ |
 |------|-----------|-----------|------------|------------|--------------|
 | $t_0$ | $\alpha$ | $A_0$    | $B_0$    | $\cdots$ | $k_0$     |
 | $t_1$ | $\alpha$ | $A_1$    | $B_1$    | $\cdots$ | $k_1$     |
@@ -96,7 +96,7 @@ Or, if you have more than one treatment group in your dataframe:
 | $\vdots$ | $\alpha$ | $\vdots$ |$\vdots$   | $\ddots$ | $\vdots$    |
 | $t_n$ | $\alpha$ | $A_n$    | $B_n$    | $\cdots$ | $k_n$     |
 
-| Time | Treatment |Variable A | Variable B | ... | Variable $k$ |
+| Time | Treatment |Variable A | Variable B | $\cdots$ | Variable $k$ |
 |------|-----------|-----------|------------|------------|--------------|
 | $t_0$ | $\beta$  | $A_0$    | $B_0$    | $\cdots$ | $k_0$     |
 | $t_1$ | $\beta$  | $A_1$    | $B_1$    | $\cdots$ | $k_1$     |
