@@ -62,6 +62,7 @@ your_data = pd.read_excel('your_data_file.xlsx')
 ```
 
 Doing this should result in a dataframe that looks, in some way, shape, or form, like:
+
 | Time | Variable A | Variable B | $$\cdots$$ | Variable $k$ |
 |-------|------------|------------|------------|--------------|
 | $t_0$ | $$A_0$$    | $$B_0$$    | $$\cdots$$ | $$k_0$$      |
