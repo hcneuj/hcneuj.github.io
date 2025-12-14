@@ -100,30 +100,62 @@ details code:not(pre code) {
 
 pre,
 code {
-  background-color: #1e1e1e;
+  background: #1e1e1e;
   color: #d4d4d4;
 }
 
-/* Keywords: import, from, return, if, etc. */
-.highlight .k {
+/* ============================= */
+/* Code blocks (Python / Rouge) */
+/* ============================= */
+
+/* Code block container */
+.highlight {
+  background: #1e1e1e;
+  border-radius: 6px;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+/* Keywords: import, from, as, def */
+.highlight .kn {
   color: #c586c0;
   font-weight: 600;
 }
 
-/* Function names */
-.highlight .nf {
-  color: #82aaff;
-  font-weight: 600;
-}
-
-/* Builtins (len, range, list, etc.) */
+/* Built-in names: list, dict, range */
 .highlight .nb {
   color: #ffcb6b;
 }
 
+/* Module names: numpy, pandas, scipy */
+.highlight .nn {
+  color: #4ec9b0;
+}
+
+/* Imported names (functions, classes, variables) */
+.highlight .n {
+  color: #82aaff;
+  font-weight: 600;
+}
+
+/* Function definitions (def foo) */
+.highlight .nf {
+  color: #82aaff;
+  font-weight: 700;
+}
+
 /* Strings */
-.highlight .s {
+.highlight .s,
+.highlight .s1,
+.highlight .s2 {
   color: #c3e88d;
+}
+
+/* Comments */
+.highlight .c,
+.highlight .c1 {
+  color: #6a9955;
+  font-style: italic;
 }
 
 /* Numbers */
@@ -132,35 +164,7 @@ code {
   color: #f78c6c;
 }
 
-/* Comments */
-.highlight .c {
-  color: #6a9955;
-  font-style: italic;
-}
-
-/* Imports / modules */
-.highlight .nn {
-  color: #4ec9b0;
-}
-
 /* Operators */
 .highlight .o {
   color: #89ddff;
-}
-
-/* Variables */
-.highlight .n {
-  color: #d4d4d4;
-}
-
-/* Decorators */
-.highlight .nd {
-  color: #dcdcaa;
-}
-
-/* Improve block contrast */
-pre.highlight {
-  border: 1px solid #30363d;
-  border-radius: 6px;
-  padding: 14px;
 }
