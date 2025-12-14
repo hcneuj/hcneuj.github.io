@@ -214,3 +214,26 @@ code {
   padding: 0 !important;
   background: transparent !important;
 }
+
+/* ===================================== */
+/* Remove Minima's white code container  */
+/* (outer wrapper is <div class="highlight">) */
+/* ===================================== */
+
+div.highlight {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 1.5em 0 !important;
+}
+
+/* The actual code block is the <pre> inside it */
+div.highlight > pre,
+div.highlight pre {
+  background: #1e1e1e !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 1em !important;
+  border-radius: 6px !important;
+}
