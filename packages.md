@@ -63,38 +63,38 @@ your_data = pd.read_excel('your_data_file.xlsx')
 
 Doing this should result in a dataframe that looks, in some way, shape, or form, like:
 
-| Time | Variable A | Variable B | $$\cdots$$ | Variable $k$ |
+| Time | Variable A | Variable B | $\cdots$ | Variable $k$ |
 |-------|------------|------------|------------|--------------|
-| $t_0$ | $$A_0$$    | $$B_0$$    | $$\cdots$$ | $$k_0$$      |
-| $t_1$ | $$A_1$$    | $$B_1$$    | $$\cdots$$ | $$k_1$$      |
-| $t_2$ | $$A_2$$    | $$B_2$$    | $$\cdots$$ | $$k_2$$      |
-| $\vdots$ | $\vdots$ |$\vdots$   | $$\ddots$$ | $\vdots$     |
-| $t_n$ | $$A_n$$    | $$B_n$$    | $$\cdots$$ | $$k_n$$      |
+| $t_0$ | $A_0$    | $B_0$    | $\cdots$ | $k_0$      |
+| $t_1$ | $A_1$    | $B_1$    | $\cdots$ | $k_1$      |
+| $t_2$ | $A_2$    | $B_2$    | $\cdots$ | $k_2$      |
+| $\vdots$ | $\vdots$ |$\vdots$| $\ddots$ | $\vdots$     |
+| $t_n$ | $A_n$$    | $B_n$    | $\cdots$ | $k_n$      |
 
 Or, if you have more than one treatment group in your dataframe:
 
-| Time | Treatment |Variable A | Variable B | $$\cdots$$ | Variable $k$ |
+| Time | Treatment |Variable A | Variable B | $\cdots$ | Variable $k$ |
 |------|-----------|-----------|------------|------------|--------------|
-| $t_0$ | $\alpha$ | $$A_0$$    | $$B_0$$    | $$\cdots$$ | $$k_0$$     |
-| $t_1$ | $\alpha$ | $$A_1$$    | $$B_1$$    | $$\cdots$$ | $$k_1$$     |
-| $t_2$ | $\alpha$ | $$A_2$$    | $$B_2$$    | $$\cdots$$ | $$k_2$$     |
-| $\vdots$ | $\alpha$ | $\vdots$ |$\vdots$   | $$\ddots$$ | $\vdots$       |
-| $t_n$ | $\alpha$ | $$A_n$$    | $$B_n$$    | $$\cdots$$ | $$k_n$$     |
-| $t_0$ | $\beta$  | $$A_0$$    | $$B_0$$    | $$\cdots$$ | $$k_0$$     |
-| $t_1$ | $\beta$  | $$A_1$$    | $$B_1$$    | $$\cdots$$ | $$k_1$$     |
-| $t_2$ | $\beta$  | $$A_2$$    | $$B_2$$    | $$\cdots$$ | $$k_2$$     |
-| $\vdots$ | $\beta$ | $\vdots$ |$\vdots$   | $$\ddots$$ | $\vdots$       |
-| $t_n$ | $\beta$  | $$A_n$$    | $$B_n$$    | $$\cdots$$ | $$k_n$$     |
+| $t_0$ | $\alpha$ | $A_0$    | $B_0$    | $\cdots$ | $k_0$     |
+| $t_1$ | $\alpha$ | $A_1$    | $B_1$    | $\cdots$ | $k_1$     |
+| $t_2$ | $\alpha$ | $A_2$    | $B_2$    | $\cdots$ | $k_2$     |
+| $\vdots$ | $\alpha$ | $\vdots$ |$\vdots$ | $\ddots$ | $\vdots$  |
+| $t_n$ | $\alpha$ | $A_n$    | $B_n$    | $\cdots$ | $k_n$       |
+| $t_0$ | $\beta$  | $A_0$    | $B_0$    | $\cdots$ | $k_0$     |
+| $t_1$ | $\beta$  | $A_1$    | $B_1$    | $\cdots$ | $k_1$     |
+| $t_2$ | $\beta$  | $A_2$    | $B_2$    | $\cdots$ | $k_2$     |
+| $\vdots$ | $\beta$ | $\vdots$ |$\vdots$   | $\ddots$ | $\vdots$       |
+| $t_n$ | $\beta$  | $A_n$    | $B_n$    | $\cdots$ | $k_n$     |
 
 3. If there are multiple treatment groups, separate dataframe by treatment group:
 
 | Time | Treatment |Variable A | Variable B | $$\cdots$$ | Variable $k$ |
 |------|-----------|-----------|------------|------------|--------------|
-| $t_0$ | $\alpha$ | $$A_0$$    | $$B_0$$    | $$\cdots$$ | $$k_0$$     |
-| $t_1$ | $\alpha$ | $$A_1$$    | $$B_1$$    | $$\cdots$$ | $$k_1$$     |
-| $t_2$ | $\alpha$ | $$A_2$$    | $$B_2$$    | $$\cdots$$ | $$k_2$$     |
-| $\vdots$ | $\alpha$ | $\vdots$ |$\vdots$   | $$\ddots$$ | $\vdots$    |
-| $t_n$ | $\alpha$ | $$A_n$$    | $$B_n$$    | $$\cdots$$ | $$k_n$$     |
+| $t_0$ | $\alpha$ | $A_0$    | $B_0$    | $\cdots$ | $k_0$     |
+| $t_1$ | $\alpha$ | $A_1$    | $B_1$    | $\cdots$ | $k_1$     |
+| $t_2$ | $\alpha$ | $A_2$    | $B_2$    | $\cdots$ | $k_2$     |
+| $\vdots$ | $\alpha$ | $\vdots$ |$\vdots$   | $\ddots$ | $\vdots$    |
+| $t_n$ | $\alpha$ | $A_n$    | $B_n$    | $\cdots$ | $k_n$     |
 
 | Time | Treatment |Variable A | Variable B | $$\cdots$$ | Variable $k$ |
 |------|-----------|-----------|------------|------------|--------------|
