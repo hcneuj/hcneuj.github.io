@@ -22,18 +22,19 @@ A Python package to perform parameter estimation for ordinary differential equat
 ## Requirements
 
 For importing into your python workspace:
-  - numpy
-  - pandas
-  - odeint from scipy.integrate
-  - differential_evolution from scipy.optimize
-  - Counter from collections
-  - matplotlib
+- `numpy`
+- `pandas`
+- `os`
+- `odeint` from `scipy.integrate`
+- `differential_evolution` from `scipy.optimize`
+- `Counter` from `collections`
+- `matplotlib`
 
 For running functions within this package:
-  - ODE model (you need to pre-specify your ODE model)
-  - Time series data (this package was written for ODE models dealing with data that has a time component)
-  - Data from different treatment groups needs to be separated out before running anything
-  - Initial conditions for all ODE equations
+- ODE model (you need to pre-specify your ODE model)
+- Time series data (this package was written for ODE models dealing with data that has a time component)
+- Data from different treatment groups needs to be separated out before running anything
+- Initial conditions for all ODE equations
 
 ## Using this Package
 
@@ -193,7 +194,7 @@ de_gen_output = DE_Generalized(['linear', 'log10'], # List of transforms to undo
 
                                plot_cost_history=True, # Returns plots of the cost history for the full model (no bootstraps) and, if n_boot > 0, plot of cost history of bootstraps
 
-                               show_usage-False, # Provides more detailed information on how to pull individual results from DE_Generalized
+                               show_usage=False, # Provides more detailed information on how to pull individual results from DE_Generalized
 
                                ODE_names=None, # Provides a way to attach ODE name to individual RMSLEs upon return
 
@@ -256,5 +257,5 @@ de_res_output['Upper CI: Fit'][:, j] # Upper bound of confidence interval for bo
 
 NOTE: Order of outputs for each ODE in `DE_Results` matches the same order ODE equations are defined and returned in from ODE_model.
 
-
+</details>
 
