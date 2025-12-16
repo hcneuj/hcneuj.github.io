@@ -38,7 +38,7 @@ For running functions within this package:
 
 #### Using this Package:
 
-1. Import all required libraries and packages:
+   1. Import all required libraries and packages:
    
 ```python
 from A_General_ODE_Bootstrap import timeseries_pull, observedData_pull, CostFunction, DE_Generalized, DE_Results
@@ -53,7 +53,7 @@ from collections import Counter
 from matplotlib.ticker import MultipleLocator
 ```
 
-2. Import data as a `pandas` dataframe:
+   2. Import data as a `pandas` dataframe:
    
 ```python
 your_data = pd.read_csv('your_data_file.csv')
@@ -86,7 +86,7 @@ Or, if you have more than one treatment group in your dataframe:
 | $\vdots$ | $\beta$ | $\vdots$ |$\vdots$   | $\ddots$ | $\vdots$ |
 | $t_n$ | $\beta$  | $A_n$    | $B_n$    | $\cdots$ | $k_n$     |
 
-3. If there are multiple treatment groups, separate dataframe by treatment group:
+   3. If there are multiple treatment groups, separate dataframe by treatment group:
 
 | Time | Treatment |Variable A | Variable B | $\cdots$ | Variable $k$ |
 |------|-----------|-----------|------------|------------|--------------|
@@ -104,7 +104,7 @@ Or, if you have more than one treatment group in your dataframe:
 | $\vdots$ | $\beta$ | $\vdots$ |$\vdots$    | $\ddots$ | $\vdots$    |
 | $t_n$ | $\beta$  | $A_n$    | $B_n$    | $\cdots$ | $k_n$     |
 
-4. Define ODE model:
+   4. Define ODE model:
    
 ```python
 def ODE_model(y, t, parameter 1, parameter 2, etc.):
@@ -126,7 +126,7 @@ def ODE_model(y, t, parameter 1, parameter 2, etc.):
 
 NOTE: The order in which you return your ODEs is the same order in which solutions will be returned when solving the ODEs using Differential Evolution and the ODE solver.
 
-5. Pull time series information using `timeseries_pull(df, time_column)`:
+   5. Pull time series information using `timeseries_pull(df, time_column)`:
    
 ```python
 sample_t, unique_t = timeseries_pull(your_data, 'your time column label')
@@ -139,7 +139,7 @@ sample_t_b, unique_t_b = timeseries_pull(your_data_trt_b, 'your time column labe
 
 NOTE: To pull the correct time series data, the column name entered in the function where time is stored needs to match what is in your dataframe.
 
-6. Pull observed data using `observedData_pull(df, data_columns)`:
+   6. Pull observed data using `observedData_pull(df, data_columns)`:
    
 ```python
 your_obs = observedData_pull(your_data, ['Variable A', 'Variable B', etc.])
@@ -152,7 +152,7 @@ your_obs_trt_b = observedData_pull(your_data_trt_b, ['Variable A', 'Variable B',
 
 NOTE: Observed data columns need to be entered as a list into `observedData_pull`, even if there is only one variable in the dataframe.
 
-7. Define parameter bounds for Differential Evolution to search through:
+   7. Define parameter bounds for Differential Evolution to search through:
    
 ```python
 parameter 1 = lower bound, upper bound
@@ -161,7 +161,7 @@ parameter 2 = lower bound, upper bound
 param_bounds = [parameter 1, parameter 2]
 ```
 
-8. Use `DE_Generalized` to solve system of ODEs, and implement optional bootstrapping:
+   8. Use `DE_Generalized` to solve system of ODEs, and implement optional bootstrapping:
    
 ```python
 de_gen_output = DE_Generalized(['linear', 'log10'], # List of transforms to undo if parameters where transformed: 'Linear' -> unchanged
@@ -206,7 +206,7 @@ NOTE: `os.cpu_count()` can be used to determine exactly how many CPU processors 
 
 NOTE: If there are multiple treatment groups, you need to run `DE_Generalized` for each treatment group, separately.
 
-9. Use `DE_Results` to get fitted line using estimated parameters, confidence intervals for parameters from bootstrapping, and confidence interval band from model fits from bootstrapping results:
+   9. Use `DE_Results` to get fitted line using estimated parameters, confidence intervals for parameters from bootstrapping, and confidence interval band from model fits from bootstrapping results:
     
 ```python
 de_res_output = DE_Results(de_gen_output,
@@ -226,7 +226,7 @@ de_res_output = DE_Results(de_gen_output,
                            param_names=['parameter 1', 'parameter 2']) # List of parameter names to produce a labeled table with parameter estimates and confidence intervals
 ```
 
-10. View results:
+   10. View results:
     
 ```python
 de_res_output['Parameter Table']
@@ -239,7 +239,7 @@ de_res_output['Parameter Table']
 
 NOTE: Lower and Upper CI estimates come from bootstrapping.
 
-11. Graph results:
+   11. Graph results:
 
 Results can now be graphed. To pull individual results from the output of `DE_Results`:
 
